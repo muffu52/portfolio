@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+.foot {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0E0F15;
+    color: #FFDD8F;
+
+    font-family: 'JetBrains Mono';
+  }
+
+  .icon {
+    margin-left: auto;
+    color: #FFDD8F;
+    font-size: 20px;
+  }
+
+//   @media (max-width: 728px) {
+//     .nav {
+//         justify-content: start;
+//     //   flex-direction: row; /* Reset to column layout */
+//     //   align-items: center; /* Center horizontally */
+//     }
+//   }

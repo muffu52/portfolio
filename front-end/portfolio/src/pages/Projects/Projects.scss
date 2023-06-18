@@ -1,0 +1,67 @@
+.heading-project{
+    margin-left: 7%;
+    font-size: 50px;
+    font-weight: 800 ;
+    color: #E9E9E9;
+    font-family: 'JetBrains Mono'
+  }
+
+  .exp-icon{
+    color: #FFA9F7;
+  }
+
+  .pro-date{
+    margin-left: 10%;
+    color: #E9E9E9;
+    font-family: 'JetBrains Mono'
+  }
+
+  
+
+  .pre-text{
+    font-size: 1.5rem;
+    color: #E9E9E9;
+    font-family: 'JetBrains Mono'
+  }
+
+  .post-text{
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #E9E9E9;
+    font-family: 'JetBrains Mono'
+  }
+
+  @media (max-width: 728px) {
+    .heading-project{
+        // margin-left: 14%;
+        font-size: 26px;
+        font-weight: 400 ;
+        color: #E9E9E9;
+        font-family: 'JetBrains Mono'
+      }
+
+      .pre-text{
+        font-size: 1.0rem;
+        color: #E9E9E9;
+        font-family: 'JetBrains Mono'
+      }
+    
+      .post-text{
+        font-size: 2.0rem;
+        font-weight: 800;
+        color: #E9E9E9;
+        font-family: 'JetBrains Mono'
+      }
+
+      .pro-date{
+        color: #E9E9E9;
+        font-size: 0.8rem;
+        font-family: 'JetBrains Mono'
+      }
+
+      .pro-description{
+        font-size: 0.8rem;
+        color: #E9E9E9;
+        font-family: 'JetBrains Mono'
+      }
+}

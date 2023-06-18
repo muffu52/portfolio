@@ -1,0 +1,47 @@
+.heading-project{
+    margin-left: 7%;
+    font-size: 50px;
+    font-weight: 800 ;
+    color: #E9E9E9;
+    font-family: 'JetBrains Mono'
+  }
+
+  .exp-icon{
+    color: #FFA9F7;
+  }
+
+  .pro-date{
+    margin-left: 10%;
+    color: #E9E9E9;
+    font-family: 'JetBrains Mono'
+  }
+
+  
+
+  .skill-name{
+    font-size: 1.2rem;
+    color: #E9E9E9;
+    font-family: 'JetBrains Mono'
+  }
+
+  .skill-level{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #FFDD8F;
+    font-family: 'JetBrains Mono'
+  }
+
+  @media (max-width: 728px) {
+    .skill-name{
+      font-size: 1.0rem;
+      color: #E9E9E9;
+      font-family: 'JetBrains Mono'
+    }
+  
+    .skill-level{
+      font-size: 1.0rem;
+      font-weight: 400;
+      color: #FFDD8F;
+      font-family: 'JetBrains Mono'
+    }
+}

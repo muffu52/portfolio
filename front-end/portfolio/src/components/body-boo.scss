@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+// .ccc {
+//     display: flex;
+//     align-items: center;
+//     padding-bottom: 166px;
+//   }
+  
+//   .cube-wrapper {
+//     margin-right: 350px; /* Adjust the margin as needed */
+//   }
+
+.info {
+  margin-left: 8%;
+}
+
+.info .Name{
+  font-size: 80px;
+  font-weight: 800 ;
+  color: #E9E9E9;
+  font-family: 'JetBrains Mono'
+}
+
+.info .Description{
+  font-size: 18px;
+  font-weight: 400 ;
+  color: #E9E9E9;
+  font-family: 'JetBrains Mono'
+}
+
+
+@media (max-width: 728px) {
+  .info .Name{
+    font-size: 40px;
+    font-weight: 800 ;
+    color: #E9E9E9;
+    font-family: 'JetBrains Mono'
+  }
+  
+  .info .Description{
+    font-size: 10px;
+    font-weight: 400 ;
+    color: #E9E9E9;
+    font-family: 'JetBrains Mono'
+  }
+}

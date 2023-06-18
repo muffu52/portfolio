@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.navbar {
+    background-color: #0E0F15;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+.navbar-brand{
+    color: #FFDD8F;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-weight: 700;
+    font-size: 33px;
+    padding-left: 10%;
+  }
+
+.navbar-item{
+  margin-left: 5%;
+}
+
+.item-icon {
+    margin-right: 10px;
+  }
+
+#toggleButton{
+    background-color: #BDBDBD;
+    color: #BDBDBD;
+  }
+
+#offcanvasNavbar{
+    background-color: #0E0F15;
+  }
+
+#closeButton{
+    background-color: #BDBDBD;
+  }
