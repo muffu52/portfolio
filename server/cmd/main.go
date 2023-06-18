@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"portfolio/internal/app/portfolio"
+	"server/server/internal/app/portfolio"
 
 	"github.com/gin-gonic/gin"
 )
