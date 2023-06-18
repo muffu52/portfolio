@@ -16,6 +16,7 @@ func openDbConnection() (db *sql.DB) {
 	database := Config.Postgres.Database
 	applicationName := Config.Service.Name
 	connStr := fmt.Sprintf("user=%s password=%s host=%s dbname=%s application_name=%s sslmode=disable", user, password, host, database, applicationName)
+	fmt.Println("Connecting to database: ", connStr)
 	db, err = sql.Open("postgres", connStr)
 	if err != nil {
 		fmt.Println("Error connecting to database: ", err)
