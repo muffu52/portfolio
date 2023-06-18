@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"server/server/internal/app/portfolio"
 
 	"github.com/gin-gonic/gin"
@@ -42,5 +43,10 @@ func main() {
 
 	fmt.Println("Starting c-link server, env:", portfolio.ENV)
 
-	r.Run(":8080")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	r.Run(":" + port)
 }
