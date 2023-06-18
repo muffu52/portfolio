@@ -4,17 +4,23 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
+	"os"
 
 	_ "github.com/lib/pq"
 )
 
 func openDbConnection() (db *sql.DB) {
 	var err error
-	host := Config.Postgres.Host
-	user := Config.Postgres.User
-	password := Config.Postgres.Password
-	database := Config.Postgres.Database
-	applicationName := Config.Service.Name
+	// host := Config.Postgres.Host
+	// user := Config.Postgres.User
+	// password := Config.Postgres.Password
+	// database := Config.Postgres.Database
+	// applicationName := Config.Service.Name
+	host := os.Getenv("POSTGRES_HOST")
+	user := os.Getenv("POSTGRES_USER")
+	password := os.Getenv("POSTGRES_PASSWORD")
+	database := os.Getenv("POSTGRES_DATABASE")
+	applicationName := os.Getenv("POSTGRES_NAME")
 	connStr := fmt.Sprintf("user=%s password=%s host=%s dbname=%s application_name=%s sslmode=disable", user, password, host, database, applicationName)
 	fmt.Println("Connecting to database: ", connStr)
 	db, err = sql.Open("postgres", connStr)
