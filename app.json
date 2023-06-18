@@ -2,10 +2,10 @@
     "environments": {
       "buildpacks": [
         {
-          "url": "front-end/portfolio/heroku/go"
+          "url": "heroku/go"
         },
         {
-          "url": "server/portfolio/heroku/nodejs"
+          "url": "heroku/nodejs"
         }
       ]
     }
