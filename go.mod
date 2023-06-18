@@ -1,3 +1,3 @@
-module portfolio-app
+module portfolio
 
 go 1.19
