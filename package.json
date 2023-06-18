@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-app",
+  "version": "1.0.0",
+  "description": "my portfolio app",
+  "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muffu52/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muffu52/portfolio/issues"
+  },
+  "homepage": "https://github.com/muffu52/portfolio#readme"
+}
