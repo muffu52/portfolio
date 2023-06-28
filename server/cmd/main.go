@@ -11,7 +11,7 @@ import (
 func main() {
 	fmt.Println("Hello World the app is running!")
 	r := gin.New()
-	r.LoadHTMLGlob("/front-end/dist/*.html")
+	r.LoadHTMLGlob("./front-end/dist/*.html")
 	r.Use(portfolio.CORSMiddleware())
 	information := r.Group("/information")
 	information.GET("", portfolio.DisplayInformation)
