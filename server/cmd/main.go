@@ -11,6 +11,7 @@ import (
 func main() {
 	fmt.Println("Hello World the app is running!")
 	r := gin.New()
+	r.LoadHTMLGlob("/front-end/dist/*.html")
 	r.Use(portfolio.CORSMiddleware())
 	information := r.Group("/information")
 	information.GET("", portfolio.DisplayInformation)
@@ -40,14 +41,6 @@ func main() {
 	education.PUT("/:id", portfolio.UpsertEducation)
 	// education.DELETE("/:id", portfolio.DeleteEducation)
 	// education.POST("", portfolio.InsertEducation)
-
-	server := r.Group("")
-	server.Static("/", "./server/front-end/dist")
-	// Route handler for the index page
-	server.GET("/", func(c *gin.Context) {
-		// Return the index.html file for all routes
-		c.File("./server/front-end/dist/index.html")
-	})
 
 	fmt.Println("Starting c-link server, env:", portfolio.ENV)
 
