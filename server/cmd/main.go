@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello World!")
+	fmt.Println("Hello World the app is running!")
 	r := gin.New()
 	r.Use(portfolio.CORSMiddleware())
 	information := r.Group("/information")
