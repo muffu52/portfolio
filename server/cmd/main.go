@@ -42,6 +42,9 @@ func main() {
 	// education.DELETE("/:id", portfolio.DeleteEducation)
 	// education.POST("", portfolio.InsertEducation)
 
+	if portfolio.ENV == "production" {
+		gin.SetMode(gin.ReleaseMode)
+	}
 	fmt.Println("Starting c-link server, env:", portfolio.ENV)
 
 	port := os.Getenv("PORT")
