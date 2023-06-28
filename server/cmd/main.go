@@ -41,6 +41,14 @@ func main() {
 	// education.DELETE("/:id", portfolio.DeleteEducation)
 	// education.POST("", portfolio.InsertEducation)
 
+	r.Static("/", "./server/front-end/dist")
+
+	// Route handler for the index page
+	r.GET("/", func(c *gin.Context) {
+		// Return the index.html file for all routes
+		c.File("./server/front-end/dist/index.html")
+	})
+
 	fmt.Println("Starting c-link server, env:", portfolio.ENV)
 
 	port := os.Getenv("PORT")
