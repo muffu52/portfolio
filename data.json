@@ -1,0 +1,156 @@
+{
+    "education": [
+        {
+            "id" : "8479312f-f706-4391-ab37-97e34227be85",
+            "institution" : "Asian Institute of Technology",
+            "degree" : "Bachelor of Science in Engineering - Mechatronics Engineering",
+            "start_date" : "2014-09-01",
+            "end_date" : "2018-04-01",
+            "location" : "Bangkok, Thailand",
+            "description" : "Asia’s first regional graduate school in engineering"
+        },
+        {
+            "id" : "48f53de4-1ce1-4c5a-b241-d65c4a3e3057",
+            "institution" : "Asian Institute of Technology",
+            "degree" : "Master of Engineering - Computer Science",
+            "start_date" : "2021-09-01",
+            "end_date" : "2023-09-01",
+            "location" : "Bangkok, Thailand",
+            "description" : "Asia’s first regional graduate school in engineering"
+        },
+        {
+            "id" : "3ec3a7bb-1c55-44ad-9e7c-801d8cf6ee0f",
+            "institution" : "Telecom SudParis - Institut Polytechnique de Paris",
+            "degree" : "Master of Science - Data science and Network Intelligence",
+            "start_date" : "2022-09-01",
+            "end_date" : "2023-09-01",
+            "location" : "Paris, France",
+            "description" : "leading French engineering school, and a member of the prestigious Institut Polytechnique de Paris"
+        }
+    ],
+        "experience": [
+            {
+                "id" : "a2eb93b3-80a4-48cb-812a-607610e38d6d",
+                "title" : "Software Engineer - Backend",
+                "company" : "True Corporation (TRUE)",
+                "location" : "Thailand",
+                "start_date" : "2021-02-01",
+                "end_date" : "2022-07-01",
+                "description" : "One of the largest mobile operators and the largest internet service provider in Thailand. Developed and maintained RESTful webservices for True's campaign creating web application using Golang. Design of a service to handle a sizeable amount of expired mobile campaigns on a daily basis. Redesigning a system architecture to create independent services in the form of \r\nmicroservices to handle changes and failures efficiently.",
+                "link" : "https:\/\/www.true.th\/en\/"
+            },
+            {
+                "id" : "6c39161d-6f70-4f6e-9565-b2047c554edb",
+                "title" : "OpenCV Programmer",
+                "company" : "Praditsoft",
+                "location" : "Thailand",
+                "start_date" : "2019-01-01",
+                "end_date" : "2019-11-01",
+                "description" : "A tech startup providing services to government and private enterprises including TRUE and AIS. Designing an application using OpenCV and Python to capture ID cards and classify the type of ID card of the user using machine learning models. Design people and vehicle counting applications to help assess futuredevelopment in those areas. Implement a document scanning feature on an android mobile application.",
+                "link" : "http:\/\/www.praditsoft.co.th"
+            },
+            {
+                "id" : "ef352512-da51-485c-afa5-760a54f769d0",
+                "title" : "Machine Learning and DevOps Engineer",
+                "company" : "Smile",
+                "location" : "France",
+                "start_date" : "2023-02-01",
+                "end_date" : "2023-08-01",
+                "description" : "A pioneer of technology and also the European expert in open source solutions. Designing a streaming architecture using Kafka and Python.",
+                "link" : "https:\/\/www.smile.eu\/en"
+            },
+            {
+                "id" : "0d649b4a-0771-4b1d-9117-7c926945e9e5",
+                "title" : "Junior Software Engineer - UI design",
+                "company" : "Advanced Info Service (AIS)",
+                "location" : "Thailand",
+                "start_date" : "2019-11-01",
+                "end_date" : "2021-02-01",
+                "description" : "Largest mobile phone operator in Thailand. Develop and maintain web application integrated with a sim card dispensing machine using angular framework for sim preparation. Create RESTful web services for the sim card dispensing web application to access and update AIS information using Nodejs and mongoD.",
+                "link" : "https:\/\/www.ais.th\/en\/index.html"
+            }
+        ],
+        "information": [
+            {
+                "id" : "5392a4a3-61b7-4a7d-b9cb-7c6bc4d666a3",
+                "name" : "Mufaddal Enayath Hussain",
+                "email" : "enayathmufu@yahoo.com",
+                "address" : "Évry - France",
+                "summary" : "With over three years of experience in the software industry, I have worked with multicultural teams and developed a deep interest in the field of software engineering. Currently, I am pursuing a dual degree for a Master's in Data Science and Network Intelligence, and Computer Science",
+                "profile" : ""
+            }
+        ],
+        "project": [
+            {
+                "id" : "5d998360-a960-44c3-bd53-316fdc8031fc",
+                "name" : "Planar ping pong ball bouncing robot",
+                "description" : "Designed a ping pong ball bouncing robot that can continuously bounce a ball on a single plane by detecting the balls position in real time using OpenCV\r\nand C++ and relaying it's coordinates to Arduino board to control the y-axis of\r\nthe bat as well as it's rotation using motors. This project required the use of\r\n3D printing custom parts which were designed in SolidWorks to allow motion\r\nof the bat in the y axis.",
+                "start_date" : "2018-01-01",
+                "end_date" : "2018-04-01",
+                "link" : "https:\/\/youtu.be\/4loLX1YbByE",
+                "image" : ""
+            },
+            {
+                "id" : "c233277c-eb3b-4fad-8c9e-d678e5170e86",
+                "name" : "AIT Student Union website",
+                "description" : "Designing a dynamic webpage for the AIT student union using Ruby on rails\r\nframework and Postgres database to be used to keep the students of AIT\r\ninformed about events and allowing them to contact the union regarding any\r\nissues.\r\nImplementing continuous Integration and continuous deployment pipeline\r\nusing gitlab CI\/CD for testing and seamless and safe deployment.",
+                "start_date" : "2022-01-01",
+                "end_date" : "2022-04-01",
+                "link" : "https:\/\/github.com\/muffu52\/SU-AIT.git",
+                "image" : ""
+            }
+        ],
+        "skill": [
+            {
+                "id" : "4b243254-f93e-4c55-9f9c-16afe90998ee",
+                "skill_name" : "Golang",
+                "skill_level" : 4
+            },
+            {
+                "id" : "faeb7f8e-d844-4b01-8646-9427c01cd2be",
+                "skill_name" : "Python",
+                "skill_level" : 5
+            },
+            {
+                "id" : "69b8a515-01db-4dcd-93b4-327d5030f829",
+                "skill_name" : "Ruby on rails",
+                "skill_level" : 4
+            },
+            {
+                "id" : "88dc696c-1f92-447f-b5a2-6219dd7083fa",
+                "skill_name" : "React",
+                "skill_level" : 3
+            },
+            {
+                "id" : "2824df9c-29a0-451d-9582-4d3f2c10e0b0",
+                "skill_name" : "Angular",
+                "skill_level" : 4
+            },
+            {
+                "id" : "41c728f7-ea24-45ea-8074-03c6a745e8f7",
+                "skill_name" : "Java",
+                "skill_level" : 3
+            },
+            {
+                "id" : "945f40f1-9899-4b01-b5fd-710c6c60f1e2",
+                "skill_name" : "Kafka",
+                "skill_level" : 4
+            },
+            {
+                "id" : "5435243c-d230-42d1-9bd1-86a676c3d2c3",
+                "skill_name" : "Docker & Docker Swarm",
+                "skill_level" : 4
+            },
+            {
+                "id" : "061a1e08-b507-4612-9b12-d8d5c7618876",
+                "skill_name" : "SQL (MariaDB, Postgres)",
+                "skill_level" : 4
+            },
+            {
+                "id" : "fca415ac-d6e8-48a7-93d7-6005ca960339",
+                "skill_name" : "NoSQL (Redis, MongoDB)",
+                "skill_level" : 3
+            }
+        ]
+        
+}
