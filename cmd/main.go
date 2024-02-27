@@ -15,9 +15,9 @@ func main() {
 	// r.Static("/static", "dist/assets")
 	r.Use(portfolio.CORSMiddleware())
 	r.GET("/", func(c *gin.Context) {
-		c.File("./dist/index.html")
+		c.File("../dist/index.html")
 	})
-	r.Static("/assets", "./dist/assets")
+	r.Static("/assets", "../dist/assets")
 	information := r.Group("/information")
 	information.GET("", portfolio.DisplayInformation)
 	information.PUT("/:id", portfolio.UpsertInformation)
