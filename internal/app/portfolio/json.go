@@ -126,7 +126,7 @@ func GetSkills() []SkillSchema {
 		skill := SkillSchema{
 			Id:    skillData.(map[string]interface{})["id"].(string),
 			Name:  skillData.(map[string]interface{})["skill_name"].(string),
-			Level: int8(skillData.(map[string]interface{})["skill_level"].(int8)), // Assuming skill_level is a number in JSON
+			Level: int8(skillData.(map[string]interface{})["skill_level"].(int)), // Assuming skill_level is a number in JSON
 		}
 		skillList = append(skillList, skill)
 	}
