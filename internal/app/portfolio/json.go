@@ -8,7 +8,7 @@ import (
 func GetInformation() InformationSchema {
 
 	// Read data from JSON file
-	data, err := ioutil.ReadFile("../../data.json")
+	data, err := ioutil.ReadFile("../../../data.json")
 	if err != nil {
 		panic(err)
 	}
@@ -38,7 +38,7 @@ func GetInformation() InformationSchema {
 
 func GetExperience() []ExperienceSchema {
 	// Read data from JSON file
-	data, err := ioutil.ReadFile("../../data.json")
+	data, err := ioutil.ReadFile("../../../data.json")
 	if err != nil {
 		panic(err)
 	}
@@ -70,7 +70,7 @@ func GetExperience() []ExperienceSchema {
 
 func GetEducation() []EducationeSchema {
 	// Read data from JSON file
-	data, err := ioutil.ReadFile("../../data.json")
+	data, err := ioutil.ReadFile("../../../data.json")
 	if err != nil {
 		panic(err)
 	}
@@ -101,7 +101,7 @@ func GetEducation() []EducationeSchema {
 
 func GetSkills() []SkillSchema {
 	// Read data from JSON file
-	data, err := ioutil.ReadFile("../../data.json")
+	data, err := ioutil.ReadFile("../../../data.json")
 	if err != nil {
 		panic(err)
 	}
@@ -128,7 +128,7 @@ func GetSkills() []SkillSchema {
 
 func GetProjects() []ProjectSchema {
 	// Read data from JSON file
-	data, err := ioutil.ReadFile("../../data.json")
+	data, err := ioutil.ReadFile("../../../data.json")
 	if err != nil {
 		panic(err)
 	}
