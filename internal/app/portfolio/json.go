@@ -2,20 +2,22 @@ package portfolio
 
 import (
 	"encoding/json"
-	"io/ioutil"
+	"os"
 )
 
 func GetInformation() InformationSchema {
 
 	// Read data from JSON file
-	data, err := ioutil.ReadFile("../../../data.json")
+	file, err := os.Open("../../data.json")
 	if err != nil {
 		panic(err)
 	}
+	defer file.Close()
 
-	// Unmarshal JSON data
+	// Decode JSON data
 	var jsonData map[string]interface{}
-	if err := json.Unmarshal(data, &jsonData); err != nil {
+	decoder := json.NewDecoder(file)
+	if err := decoder.Decode(&jsonData); err != nil {
 		panic(err)
 	}
 
@@ -38,14 +40,16 @@ func GetInformation() InformationSchema {
 
 func GetExperience() []ExperienceSchema {
 	// Read data from JSON file
-	data, err := ioutil.ReadFile("../../../data.json")
+	file, err := os.Open("../../data.json")
 	if err != nil {
 		panic(err)
 	}
+	defer file.Close()
 
-	// Unmarshal JSON data
+	// Decode JSON data
 	var jsonData map[string]interface{}
-	if err := json.Unmarshal(data, &jsonData); err != nil {
+	decoder := json.NewDecoder(file)
+	if err := decoder.Decode(&jsonData); err != nil {
 		panic(err)
 	}
 
@@ -70,14 +74,16 @@ func GetExperience() []ExperienceSchema {
 
 func GetEducation() []EducationeSchema {
 	// Read data from JSON file
-	data, err := ioutil.ReadFile("../../../data.json")
+	file, err := os.Open("../../data.json")
 	if err != nil {
 		panic(err)
 	}
+	defer file.Close()
 
-	// Unmarshal JSON data
+	// Decode JSON data
 	var jsonData map[string]interface{}
-	if err := json.Unmarshal(data, &jsonData); err != nil {
+	decoder := json.NewDecoder(file)
+	if err := decoder.Decode(&jsonData); err != nil {
 		panic(err)
 	}
 
@@ -101,14 +107,16 @@ func GetEducation() []EducationeSchema {
 
 func GetSkills() []SkillSchema {
 	// Read data from JSON file
-	data, err := ioutil.ReadFile("../../../data.json")
+	file, err := os.Open("../../data.json")
 	if err != nil {
 		panic(err)
 	}
+	defer file.Close()
 
-	// Unmarshal JSON data
+	// Decode JSON data
 	var jsonData map[string]interface{}
-	if err := json.Unmarshal(data, &jsonData); err != nil {
+	decoder := json.NewDecoder(file)
+	if err := decoder.Decode(&jsonData); err != nil {
 		panic(err)
 	}
 
@@ -128,14 +136,16 @@ func GetSkills() []SkillSchema {
 
 func GetProjects() []ProjectSchema {
 	// Read data from JSON file
-	data, err := ioutil.ReadFile("../../../data.json")
+	file, err := os.Open("../../data.json")
 	if err != nil {
 		panic(err)
 	}
+	defer file.Close()
 
-	// Unmarshal JSON data
+	// Decode JSON data
 	var jsonData map[string]interface{}
-	if err := json.Unmarshal(data, &jsonData); err != nil {
+	decoder := json.NewDecoder(file)
+	if err := decoder.Decode(&jsonData); err != nil {
 		panic(err)
 	}
 
