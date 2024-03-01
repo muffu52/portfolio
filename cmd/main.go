@@ -1,17 +1,25 @@
 package main
 
 import (
+	"context"
 	"fmt"
+	"io"
 	"net/http"
 	"os"
+	"os/signal"
 	"server/internal/app/portfolio"
+	"syscall"
+	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/robfig/cron/v3"
+	"github.com/go-co-op/gocron"
 )
 
 func main() {
 	fmt.Println("Hello World the app is running!")
+	// Listen for SIGINT and SIGTERM signals to gracefully shutdown the application
+	signalChan := make(chan os.Signal, 1)
+	signal.Notify(signalChan, os.Interrupt, syscall.SIGTERM)
 	r := gin.New()
 	// r.LoadHTMLGlob("./dist/index.html")
 	// r.Static("/static", "dist/assets")
@@ -59,34 +67,65 @@ func main() {
 		port = "8080"
 	}
 
-	c := cron.New()
+	// Create a context for handling application lifecycle
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel() // Ensure cancel is called to release resources
 
-	// Add a cron job that runs every 30 seconds
-	_, err := c.AddFunc("*/30 * * * *", func() {
-		makeAPIRequest()
-	})
+	scheduler := gocron.NewScheduler(time.UTC)
+
+	// Add a task to the scheduler
+	scheduler.Every(5).Seconds().Do(makeAPIRequest, ctx) // Schedule task every 5 seconds
+
+	// Start the scheduler in a separate goroutine
+	go func() {
+		// Start the scheduler
+		scheduler.StartBlocking()
+	}()
+
+	fmt.Println("Cron job started")
+
+	// Start the HTTP server in a separate goroutine
+	go func() {
+		if err := r.Run(":" + port); err != nil {
+			fmt.Println("Error starting HTTP server:", err)
+		}
+	}()
+
+	// Block until a signal is received
+	<-signalChan
+
+	// Cancel the context to stop the cron job
+	cancel()
+
+	fmt.Println("Shutting down gracefully...")
+	// Optionally, you can wait for some time for the cron job to finish before exiting
+	time.Sleep(2 * time.Second)
+	fmt.Println("Goodbye!")
+
+}
+
+func makeAPIRequest(ctx context.Context) {
+	apiUrl := "https://mufaddalenayathh.onrender.com/information"
+
+	// Create a new HTTP request with the provided context
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, apiUrl, nil)
 	if err != nil {
-		fmt.Println("Error adding cron job:", err)
+		fmt.Println("Error creating HTTP request:", err)
 		return
 	}
 
-	c.Start()
-
-	r.Run(":" + port)
-}
-
-func makeAPIRequest() {
-	apiUrl := "https://mufaddalenayathh.onrender.com/information"
-
-	response, err := http.Get(apiUrl)
+	// Send the HTTP request
+	response, err := http.DefaultClient.Do(req)
 	if err != nil {
 		fmt.Println("Error making GET request:", err)
 		return
 	}
 	defer response.Body.Close()
 
-	if response.StatusCode != http.StatusOK {
-		fmt.Println("Unexpected response status code:", response.StatusCode)
+	_, err = io.ReadAll(response.Body)
+	if err != nil {
+		fmt.Println("Error reading response body:", err)
 		return
 	}
+	// fmt.Println("Response body:", string(body))
 }
