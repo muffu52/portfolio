@@ -2,10 +2,12 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 	"os"
 	"server/internal/app/portfolio"
 
 	"github.com/gin-gonic/gin"
+	"github.com/robfig/cron/v3"
 )
 
 func main() {
@@ -57,5 +59,34 @@ func main() {
 		port = "8080"
 	}
 
+	c := cron.New()
+
+	// Add a cron job that runs every 30 seconds
+	_, err := c.AddFunc("*/30 * * * * *", func() {
+		makeAPIRequest()
+	})
+	if err != nil {
+		fmt.Println("Error adding cron job:", err)
+		return
+	}
+
+	c.Start()
+
 	r.Run(":" + port)
+}
+
+func makeAPIRequest() {
+	apiUrl := "https://mufaddalenayathh.onrender.com/information"
+
+	response, err := http.Get(apiUrl)
+	if err != nil {
+		fmt.Println("Error making GET request:", err)
+		return
+	}
+	defer response.Body.Close()
+
+	if response.StatusCode != http.StatusOK {
+		fmt.Println("Unexpected response status code:", response.StatusCode)
+		return
+	}
 }
