@@ -62,7 +62,7 @@ func main() {
 	c := cron.New()
 
 	// Add a cron job that runs every 30 seconds
-	_, err := c.AddFunc("*/30 * * * * *", func() {
+	_, err := c.AddFunc("*/30 * * * *", func() {
 		makeAPIRequest()
 	})
 	if err != nil {
